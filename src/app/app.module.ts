@@ -9,9 +9,11 @@ import { AppRouts } from './app-routing.module';
 //Components
 import { AppComponent } from './app.component';
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, RouterModule.forRoot(AppRouts)],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,11 +1,21 @@
 <p>Admin Login</p>
 <br>
-<button type="button" [routerLink]="['/dashboard']">Dashboard</button>
-<br><br>
-<button type="button" [routerLink]="['/clients']">Clients</button>
-<br><br>
-<button type="button" [routerLink]="['/investors']">Investors</button>
-<br><br>
-<button type="button" [routerLink]="['/transactions/admin']">Transactions</button>
-<br><br>
-<button type="button" [routerLink]="['/configuration']">Configuration</button>
+<div ng-adminLevel1>
+  <button type="button" [routerLink]="['/dashboard']">Dashboard</button>
+  <br><br>
+</div>
+<div ng-mouseOver>
+  <button type="button" [routerLink]="['/clients']">Clients</button>
+  <br><br>
+</div>
+<div [ng-role-validation]="'admin'">
+  <button type="button" [routerLink]="['/investors']">Investors</button>
+  <br><br>
+</div>
+<div>
+  <button type="button" [routerLink]="['/transactions/admin']">Transactions</button>
+  <br><br>
+</div>
+<div>
+  <button type="button" [routerLink]="['/configuration']">Configuration</button>
+</div>

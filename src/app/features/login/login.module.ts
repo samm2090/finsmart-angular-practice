@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from './../../shared/shared.module';
 
 //Components
 import { LoginClientComponent } from './components/login-client/login-client.component';
@@ -15,7 +16,8 @@ import { LoginRoutes } from './login.routes';
   declarations: [LoginInvestorComponent, LoginAdminComponent, LoginClientComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(LoginRoutes)
+    RouterModule.forChild(LoginRoutes),
+    SharedModule
   ]
 })
 export class LoginModule { }
