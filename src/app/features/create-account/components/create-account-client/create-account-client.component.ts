@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AuthService } from './../../../../services/auth.service';
 import { ClientService } from './../../../../services/client.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-account-client',
@@ -10,7 +11,8 @@ import { ClientService } from './../../../../services/client.service';
 })
 export class CreateAccountClientComponent implements OnInit {
 
-  constructor(private auth: AuthService, private clientService: ClientService) { }
+  constructor(private auth: AuthService, private clientService: ClientService,
+    private router: Router) { }
 
   ngOnInit() {
   }
@@ -38,10 +40,11 @@ export class CreateAccountClientComponent implements OnInit {
       console.log(resp);
     });
 
-    this.clientService.create(client).subscribe((resp)=>{
+    this.clientService.create(client).subscribe((resp) => {
       console.log(resp);
-    });
 
+      this.router.navigate(['users/clients']);
+    });
   }
 
 }

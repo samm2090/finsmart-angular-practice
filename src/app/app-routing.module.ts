@@ -11,6 +11,6 @@ export const AppRouts: Routes = [
   { path: 'transactions', loadChildren: './features/transactions/transactions.module#TransactionsModule' },
   { path: 'bank-accounts', loadChildren: './features/bank-accounts/bank-accounts.module#BankAccountsModule' },
 
-  { path: '**', pathMatch: 'full', redirectTo: '/home' },
-  { path: '', pathMatch: 'full', redirectTo: '/home' }
+  { path: '**', pathMatch: 'full', redirectTo: '/users/clients' },
+  { path: '', pathMatch: 'full', redirectTo: '/users/clients' }
 ];

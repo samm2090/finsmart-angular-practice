@@ -16,7 +16,7 @@ export class ClientService {
   }
 
   update(client: any) {
-    return this.http.put(this.url, client);
+    return this.http.put(this.url + '/' + client.id, client);
   }
 
   findOne(id: number) {
