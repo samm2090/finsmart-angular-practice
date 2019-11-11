@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import {SharedModule} from './../../shared/shared.module';
 
 //routes
 import { CreateAccountRoutes } from './create-account.routes';
@@ -13,6 +14,7 @@ import { CreateAccountClientComponent } from './components/create-account-client
   declarations: [CreateAccountInvestorComponent, CreateAccountClientComponent],
   imports: [
     CommonModule,
+    SharedModule,
     RouterModule.forChild(CreateAccountRoutes)
   ]
 })

@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from './../../shared/shared.module';
+
+//Routes
+import { UserRoutes } from './users.routes';
 
 //components
 import { ClientsComponent } from './components/clients/clients.component';
-
-//routes
-import { ClientsRoutes } from './clients.routes';
 
 @NgModule({
   declarations: [ClientsComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(ClientsRoutes)
+    SharedModule,
+    RouterModule.forChild(UserRoutes)
   ]
 })
-export class ClientsModule { }
+export class UsersModule { }

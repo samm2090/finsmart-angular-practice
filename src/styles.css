@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.finsmart-light-blue{
+  background-color:  #33FDCF;
+  color: #0069D9;
+  border-color: #0069D9;
+}
+
+.finsmart-light-blue:hover{
+    background-color:  white;
+}

@@ -6,6 +6,8 @@ import { RoleDirective } from './../directives/access-level/role.directive';
 import { AdminLevel1Directive } from './../directives/access-level/admin-level1.directive';
 import { MouseOverDirective } from './../directives/listener/mouse-over.directive';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AdminLevel1Directive,
@@ -13,12 +15,13 @@ import { MouseOverDirective } from './../directives/listener/mouse-over.directiv
     RoleDirective
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
-  exports:[
+  exports: [
     AdminLevel1Directive,
     MouseOverDirective,
-    RoleDirective
+    RoleDirective, ReactiveFormsModule
   ]
 })
 export class SharedModule { }
